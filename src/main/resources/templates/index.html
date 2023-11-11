@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SalesTest - Rasmi</title>
+    <meta name="description" content="Test solution By Abdelouadoud - Rasmi">
+</head>
+<body>
+<div th:each="b:${baskets}" th:utext="${b.toString().replace('&#10','<br>')}"></div>
+
+</body>
+</html>

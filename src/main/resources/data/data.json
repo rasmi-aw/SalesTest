@@ -1,0 +1,77 @@
+[
+  {
+    "goods": [
+      {
+        "name": "book",
+        "type": "BOOK",
+        "price": 12.49,
+        "quantity": 1,
+        "imported": false
+      },
+      {
+        "name": "music CD",
+        "type": "OTHER",
+        "price": 14.99,
+        "quantity": 1,
+        "imported": false
+      },
+      {
+        "name": "chocolate bar",
+        "type": "FOOD",
+        "price": 0.85,
+        "quantity": 1,
+        "imported": false
+      }
+    ]
+  },
+  {
+    "goods": [
+      {
+        "name": "box of chocolates",
+        "type": "FOOD",
+        "price": 10.0,
+        "quantity": 1,
+        "imported": true
+      },
+      {
+        "name": "bottle of perfume",
+        "type": "OTHER",
+        "price": 47.5,
+        "quantity": 1,
+        "imported": true
+      }
+    ]
+  },
+  {
+    "goods": [
+      {
+        "name": "bottle of perfume",
+        "type": "OTHER",
+        "price": 27.99,
+        "quantity": 1,
+        "imported": true
+      },
+      {
+        "name": "bottle of perfume",
+        "type": "OTHER",
+        "price": 18.99,
+        "quantity": 1,
+        "imported": false
+      },
+      {
+        "name": "packet of headache pills",
+        "type": "MEDICAL",
+        "price": 9.75,
+        "quantity": 1,
+        "imported": false
+      },
+      {
+        "name": "box of chocolates",
+        "type": "FOOD",
+        "price": 11.25,
+        "quantity": 1,
+        "imported": true
+      }
+    ]
+  }
+]
