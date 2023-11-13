@@ -47,7 +47,7 @@ public class MathUtils {
 
     /**
      * corrects the second decimal value since it's inaccurate
-     * (secondDecimal > 6 => 10 else keep the same value)
+     * (secondDecimal > 5 => 10 else keep the same value)
      */
     public static double scaleUp(double number) {
         int frac = BigDecimal.valueOf(number).movePointRight(2).intValue();
