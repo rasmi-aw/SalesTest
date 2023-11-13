@@ -36,18 +36,12 @@ public class Good {
         return (imported ? IMPORT_DUTY : 0);
     }
 
-    /**
-     * @return the sum of the taxes that should be applied to
-     */
-    public double calculateTotalTaxes() {
-        return taxRate() + importDuty();
-    }
 
     /**
      * @return the final tax amount that should be paid
      */
     public double taxAmount() {
-        return MathUtils.roundUp(quantity * price * calculateTotalTaxes());
+        return MathUtils.roundUp(quantity * price * (taxRate() + importDuty()));
     }
 
     /**
