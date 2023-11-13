@@ -24,6 +24,10 @@ public class Good {
     private GoodType type;
     private boolean imported;
 
+    /**
+     * returns the tax rate, by default it's 10%,
+     * subclasses need to override this method only to  change the default tax rate
+     */
     public double taxRate() {
         return 0.1;
     }
