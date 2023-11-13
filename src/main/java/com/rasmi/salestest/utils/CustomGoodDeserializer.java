@@ -11,7 +11,14 @@ import com.rasmi.salestest.model.Good;
 
 import java.io.IOException;
 
+/**
+ * @author Abdeloaudoud Rasmi, this class plays the role of a json deserializer,
+ * it's used to convert json object into the proper Good / Subclass instance, using
+ * {@link GoodsFactory}
+ */
 public class CustomGoodDeserializer extends StdDeserializer<Good> {
+
+    private GoodsFactory factory = new GoodsFactory();
 
     protected CustomGoodDeserializer(Class<?> vc) {
         super(vc);
@@ -24,7 +31,7 @@ public class CustomGoodDeserializer extends StdDeserializer<Good> {
     @Override
     public Good deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
         JsonNode node = deserializationContext.readTree(jsonParser);
-        return new GoodsFactory().getGood(
+        return factory.getGood(
                 node.get("name").asText(),
                 node.get("price").asDouble(),
                 node.get("quantity").asInt(),
