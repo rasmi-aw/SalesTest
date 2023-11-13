@@ -19,3 +19,6 @@ the code is put under the main folder
 ## 4-Where are the tests ?
 the tests are put under test folder
 
+## 5-Change test data ?
+the data used in this application is passed through the FakeDataProvider, to separate the business logic from data layer, all stored in **data.json** file, if you want to try with other type of data just change that file content, don't forget to edit results in test classes.
+
