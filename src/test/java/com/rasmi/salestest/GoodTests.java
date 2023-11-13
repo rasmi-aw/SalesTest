@@ -15,8 +15,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class GoodTests extends Assert {
 
-    private final GoodsFactory factory = new GoodsFactory();
-
     @Test
     public void testTotalPrice() {
         // 1 music CD a t 14.99 => totalPrice = 16.49
