@@ -24,7 +24,9 @@ public class GoodsFactory {
     public Good getGood(String name, Double price, int quantity, boolean imported, GoodType type) {
         if (type == null) {
             return null;
-        } else if (type.equals(GoodType.OTHER)) {
+        } else if (!(type.equals(GoodType.BOOK) ||
+                type.equals(GoodType.MEDICAL) ||
+                type.equals(GoodType.FOOD))) {
             return new Good(name, price, quantity, type, imported);
         } else {
             return new TaxExemptGood(name, price, quantity, type, imported);
