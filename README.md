@@ -2,7 +2,7 @@
 A spring boot based **Java** app, you can see results in the **console** or **http://localhost:8080** in your browser, it uses **Java 17** and **Maven** you can change the default port from **8080** to any other port number in case you have other services using that port such as Tomcat, all by modifying **application.properties** file under resources folder.
 
 ## 1- Simple class diagram
-![Browser](https://raw.githubusercontent.com/rasmi-aw/SalesTest/master/docs/sales_test.png)
+![Browser](https://raw.githubusercontent.com/rasmi-aw/SalesTest/master/docs/sales_test_class_diagram.png)
 
 ## 2-how to run the app ?
 running the app can be done in two ways, first: using ide (ex: intellij-idea) run button, or using command line to build it using **Maven** then run it.  
