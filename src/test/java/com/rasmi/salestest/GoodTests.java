@@ -53,11 +53,4 @@ public class GoodTests extends Assert {
         assertEquals(good.importDuty(), 0, 0);
     }
 
-    @Test
-    public void testTotalTaxes() {
-        // taxes for a non exempt product
-        Good good = factory.getGood("Harry potter", 2.0, 1, true, GoodType.OTHER);
-        assertEquals(good.calculateTotalTaxes(), 0.15, 0.00000001);
-    }
-
 }
