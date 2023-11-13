@@ -14,7 +14,8 @@ public class MathUtils {
     private MathUtils() {
     }
 
-    /** @return String representing a formatted number
+    /**
+     * @return String representing a formatted number
      * Always Display 2 digits after the point by adding a zero to the right
      * if the fraction digits number is less than 2
      */
@@ -56,5 +57,15 @@ public class MathUtils {
         secondDigit = secondDigit > 5 ? 10 : secondDigit;
         frac = frac + secondDigit;
         return BigDecimal.valueOf(frac).movePointLeft(2).doubleValue();
+    }
+
+    /**
+     * corrects the inaccurate value of a double and keep only two decimals
+     * by rounding up what's more than 2 digits after the fraction point
+     */
+    public static double correctValue(double number) {
+        return BigDecimal.valueOf(number)
+                .setScale(2, RoundingMode.HALF_UP)
+                .doubleValue();
     }
 }

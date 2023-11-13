@@ -7,8 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.List;
 
 
@@ -25,7 +23,7 @@ public class Basket {
                 .stream()
                 .map(Good::totalPrice)
                 .reduce(0.0, Double::sum);
-        return BigDecimal.valueOf(total).setScale(2, RoundingMode.HALF_UP).doubleValue();
+        return MathUtils.correctValue(total);
     }
 
 
